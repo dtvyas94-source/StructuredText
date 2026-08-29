@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{30233d5b-b8c4-41d3-a608-5078909698a6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR
+
+bButton_1 	: BOOL	:=	FALSE; // INOUT SIGNAL FROM BUTTON 1 
+bLamp_1 		: BOOL	:=	FALSE; // OUTPUT SIGNAL
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[bLamp_1 := bButton_1;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
